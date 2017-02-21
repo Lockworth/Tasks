@@ -1,0 +1,71 @@
+<html>
+<body>
+<meta charset="UTF-8">
+
+<script>
+//Atributos///
+
+var peso;
+var altura;
+
+//Funções//
+
+//Pede o Nome//
+var pedeNome= function(){
+	var nome = prompt("Olá, qual o seu nome?");
+		if (nome==null){
+		document.write("Seja bem vindo, Visitante.");
+		}
+		else{
+		document.write("Seja bem vindo, "+nome+".");
+		}
+	}
+	
+//Pede a Idade//
+var pedeIdade= function(){
+	var idade= prompt("Digite aqui sua idade");
+	if (idade < 18){ 
+		alert ("Você é menor de 18");
+		}
+		else{
+		alert ("Vocé é maior de 18");
+		}
+	}
+	
+//Calcula o IMC//
+var calculaIMC= function(altura,peso){
+	var imc= peso/(altura*altura);
+	return imc;	
+	}
+	
+//Pede Peso e Altura//
+var pedePA= function(altura,peso){
+	altura=prompt("Digite a altura. Utilize ponto ao invés de vírgula:");
+	peso=prompt("Digite o peso: ");
+	imc= calculaIMC(altura,peso);
+	}
+	
+//Print//
+var mostra= function(frase){
+	document.write(frase);
+	}
+	
+//Pula linhas//
+var pulaLinha= function(){
+	document.write("<br><br>");
+	}
+	
+	
+//
+	
+//Chamando Funções//	
+pedeNome();
+pulaLinha();
+pedeIdade();
+pedePA();
+calculaIMC();
+mostra("Seu IMC é: "+Math.round(imc)+".");
+
+</script>
+</body>
+</html>
